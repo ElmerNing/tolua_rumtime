@@ -14,7 +14,7 @@ PROTOSRCS = addressbook.proto descriptor.proto float.proto test.proto
 
 BUILD_O = $(BUILD)/o
 
-all : lib test
+all : lib
 
 lib : $(LIBNAME)
 

@@ -18,6 +18,7 @@ cp build/libpbc.a ../window/x86_64/libpbc.a
 cd ..
 
 gcc -m64 -O3 -std=gnu99 -shared \
+ snapshot.c \
  tolua.c \
  int64.c \
  uint64.c \

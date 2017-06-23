@@ -124,8 +124,15 @@ _rmessage_message(lua_State *L) {
 	const char * key = luaL_checkstring(L,2);
 	int index = lua_tointeger(L,3);
 	struct pbc_rmessage * v = pbc_rmessage_message(m,key,index);
-	lua_pushlightuserdata(L,v);
-	return 1;
+	if(v)
+	{
+		lua_pushlightuserdata(L,v);	
+		return 1;
+	}
+	else
+	{
+		return 0
+	}
 }
 
 static int
